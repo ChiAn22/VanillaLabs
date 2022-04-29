@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'CodeText';
+    src: url("../Resource/Font/CodeNext-SemiBold.otf");
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -30,13 +35,25 @@ body{
         flex-direction: column;
     }
         .content_leftInner_list{
-            background: #1939b7;
-            height: 10%;
+            border-radius: 10px;
+            background: rgba(58, 58, 58, 0.5);
+            height: 8%;
+            width: 100%;
+            margin:6px 0;
+            transition: 0.5s;
+        }
+        .content_leftInner_list:hover{
+            background: rgba(105, 105, 105, 0.5);
+            transition: 0.5s;
+        }
+        .content_leftInner_listHiddenBackground{
+            height: auto;
             width: 100%;
             margin:6px 0;
         }
             .content_leftInner_list_titleFont{
-                font-size: 26px;
+                font-size: 32px;
+                font-family: CodeText;
                 color: white;
             }
     #content_rightInner{
