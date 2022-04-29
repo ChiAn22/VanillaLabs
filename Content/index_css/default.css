@@ -53,10 +53,10 @@ body{
 #a{
     position: fixed;
     z-index: -10;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    background: rgb(199, 199, 199);
+    background: linear-gradient(#e28d2b, #ffcd2a);
     transition: 0.1s;
     transform: translate(var(--x),var(--y));
 }
