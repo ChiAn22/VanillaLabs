@@ -12,4 +12,51 @@ html{
 body{
     height: 100%;
     width: 100%;
+    background: rgb(44, 44, 44);
+}
+
+#content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+    #content_leftInner{
+        background: rgba(44, 44, 44, 0.5);
+        backdrop-filter: blur(10px);
+        height: 100%;
+        width: 20%;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+    }
+        .content_leftInner_list{
+            background: #1939b7;
+            height: 10%;
+            width: 100%;
+            margin:6px 0;
+        }
+            .content_leftInner_list_titleFont{
+                font-size: 26px;
+                color: white;
+            }
+    #content_rightInner{
+        background: #212121;
+        height: 100%;
+        width: 80%
+    }
+        #content_rightInner_iframeForContent{
+            height:100%;
+            width: 100%;
+            border: none;
+        }
+
+#a{
+    position: fixed;
+    z-index: -10;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgb(199, 199, 199);
+    transition: 0.1s;
+    transform: translate(var(--x),var(--y));
 }

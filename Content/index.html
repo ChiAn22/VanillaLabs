@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <title>主页</title>
     <link type="text/css" rel="stylesheet" href="index_css/default.css">
-    <script type="text/javascript" src="index_js/default.js"></script>
+    <script type="text/javascript" src="index_js/default.js" defer="defer"></script>
 </head>
-<!-- Style暂时先这样写，之后确定命名规范后再转移进"Content/index_css/default_2.css"-->
 <body>
 
-<div style="height: 100%;width: 100%;display: flex;">
-    <div style="background: #2c2c2c;height: 100%;width: 20%;padding: 2%;display: flex;flex-direction: column;">
+<div id="a"></div>
 
-            <div style="background: #1939b7;height: 10%;width: 100%;margin:6px 0;">
-                <p style="font-size: 26px;color: white">
+<div id="content">
+
+    <div id="content_leftInner">
+            <div class="content_leftInner_list">
+                <p class="content_leftInner_list_titleFont">
                     Labs
                 </p>
             </div>
-            <div style="background: #3366ff;height: 10%;width: 100%;margin:6px 0;"></div>
-            <div style="background: #84a9ff;height: 10%;width: 100%;margin:6px 0;"></div>
+            <div class="content_leftInner_list"></div>
+            <div class="content_leftInner_list"></div>
             <div></div>
     </div>
-    <div style="background: #212121;height: 100%;width: 80%">
-        <!-- iframe暂时先用B站代替，之后再换-->
-        <iframe src="https://www.bilibili.com/" style="height:100%;width: 100%;border: none">
 
-        </iframe>
+    <div id="content_rightInner">
+        <!-- iframe暂时先用B站代替，之后再换-->
+        <iframe src="https://www.bilibili.com/" id="content_rightInner_iframeForContent"></iframe>
     </div>
+
 </div>
 
 </body>
