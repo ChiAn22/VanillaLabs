@@ -8,11 +8,13 @@
 </head>
 <body>
 
-<div id="a"></div>
+<div id="a">
+    <div id="b"></div>
+</div>
 
 <div id="content">
 
-    <div id="content_leftInner">
+    <div id="content_leftInner" onmousemove="TouchedCircle()" onmouseleave="TouchedCircleHidden()">
             <div class="content_leftInner_listHiddenBackground" style="background: none">
                 <p class="content_leftInner_list_titleFont">
                     Vanilla Labs
@@ -24,7 +26,7 @@
     </div>
 
     <div id="content_rightInner">
-        <iframe src="https://www.bilibili.com/" id="content_rightInner_iframeForContent"></iframe>
+        <iframe src="intro/intro.html" id="content_rightInner_iframeForContent"></iframe>
     </div>
 
 </div>
