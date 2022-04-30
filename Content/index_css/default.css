@@ -27,7 +27,7 @@ body{
 }
     #content_leftInner{
         background: rgba(70, 70, 70, 0.5);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(20px);
         height: 100%;
         width: 20%;
         padding: 2%;
@@ -73,7 +73,7 @@ body{
     position: fixed;
     z-index: -10;
     transition: 0.3s;
-    filter: blur(20px);
+
 }
 #b{
 
@@ -82,7 +82,7 @@ body{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: linear-gradient(15deg,#18391e, #368144);
+    background: linear-gradient(45deg, #1b5743, #388c73, #62a43b);
     transition: 0.1s;
     transform: translate(var(--x),var(--y));
 }
