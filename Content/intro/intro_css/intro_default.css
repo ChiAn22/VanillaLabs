@@ -19,3 +19,43 @@
     background: rgb(44, 103, 35);
 }
 
+#ossm{
+    width: 100%;
+    height: auto;
+}
+#ossm_Content{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.ossm_Content_List{
+    margin-right: 20px;
+    width: 300px;
+    height: 200px;
+    background: #e7e2dc;
+    padding: 10px;
+    border-radius: 10px;
+}
+.ossm_Content_List_TitleImg{
+    height: 80%;
+    width: 100%;
+    background: maroon;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+}
+.ossm_Content_List_TitleImg_Other{
+    height: 100%;
+    width: auto;
+}
+.ossm_Content_List_Title{
+    display: flex;
+    height: 20%;
+}
+.ossm_Content_List_Title_Content{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
