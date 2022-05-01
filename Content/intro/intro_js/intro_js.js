@@ -3,7 +3,7 @@ function aa(Object) {
     let goods;
     goods = document.createElement('div');
     goods.className = 'ossm_Content_List';
-    goods.innerHTML = '<div class="ossm_Content_List_TitleImg">\n' +
+    goods.innerHTML = '<div class="ossm_Content_List_TitleImg" style="background:'+Object.backgroundColor+';">\n' +
         '                        <img src="../Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/TitleImg.png" alt="" class="ossm_Content_List_TitleImg_Other">\n' +
         '                    </div>\n' +
         '                    <div class="ossm_Content_List_Title">\n' +

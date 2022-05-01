@@ -35,11 +35,16 @@
     background: #e7e2dc;
     padding: 10px;
     border-radius: 10px;
+    transform: scale(1,1);
+    transition: 0.3s;
+}
+.ossm_Content_List:hover{
+    transform: scale(1.02,1.02);
+    transition: 0.3s;
 }
 .ossm_Content_List_TitleImg{
     height: 80%;
     width: 100%;
-    background: maroon;
     display: flex;
     justify-content: center;
     border-radius: 6px;

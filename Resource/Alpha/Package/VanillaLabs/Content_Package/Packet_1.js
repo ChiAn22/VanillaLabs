@@ -13,6 +13,7 @@ var i=0;
         contentImg:'',
         contentIntroduce:'',
         contentText:'',
+        backgroundColor:'maroon',
         date:'',
         price:'2,000',
     }
@@ -25,6 +26,7 @@ var i=0;
         contentImg:'',
         contentIntroduce:'',
         contentText:'',
+        backgroundColor:'#343434',
         date:'',
         price:'2,000',
     }
