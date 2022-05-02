@@ -30,5 +30,6 @@ var i=0;
         backgroundColor:'#343434',
         date:'',
         price:'2,000',
+        introPage_url:'',
     }
     registContent(defaultPacket2);
