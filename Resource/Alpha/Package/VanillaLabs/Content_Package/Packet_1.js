@@ -6,7 +6,7 @@ var i=0;
         i++;
     }
 
-    var defualtPacket={
+    var defaultPacket={
         title:'超鳄梨维生素C',
         titleImg:'',
         titleIntroduce:'',
@@ -16,10 +16,11 @@ var i=0;
         backgroundColor:'maroon',
         date:'',
         price:'2,000',
+        introPage_url:'../Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/page/page.html',
     }
-    registContent(defualtPacket);
+    registContent(defaultPacket);
 
-    var defualtPacket2={
+    var defaultPacket2={
         title:'qwq',
         titleImg:'',
         titleIntroduce:'',
@@ -30,4 +31,4 @@ var i=0;
         date:'',
         price:'2,000',
     }
-    registContent(defualtPacket2);
+    registContent(defaultPacket2);
