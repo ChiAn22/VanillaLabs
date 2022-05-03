@@ -17,3 +17,5 @@ aaa.addEventListener("mousemove",(e)=>{
     aaa.style.setProperty('--y',clientY-100+'px');
 });
 
+
+
