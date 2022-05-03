@@ -1,13 +1,13 @@
-function PageInitialize(){
-    var Object=document.createElement('div');
+function PageInitialize(Object){
+    var element=document.createElement('div');
 
-    Object.className='content_rightInner_Content';
-    Object.innerHTML='<div id="content_rightInner_left">\n' +
+    element.className='content_rightInner_Content';
+    element.innerHTML='<div id="content_rightInner_left">\n' +
         '                <div class="content_rightInner_leftTitle" style="background: #000000">\n' +
-        '                    <p class="content_rightInner_leftTitle_text">Content name</p>\n' +
+        '                    <p class="content_rightInner_leftTitle_text">'+Object.title+'</p>\n' +
         '                </div>\n' +
-        '                <div class="content_rightInner_leftTitle" style="background: #910d0d">\n' +
-        '                    <p class="content_rightInner_leftTitle_text">70%折扣中</p>\n' +
+        '                <div class="content_rightInner_leftTitle" style="'+Object.backgroundColor+'">\n' +
+        '                    <p class="content_rightInner_leftTitle_text">'+Object.titleIntroduce+'</p>\n' +
         '                </div>\n' +
         '            </div>\n' +
         '            <div id="content_rightInner_right"></div>';
@@ -17,7 +17,7 @@ function PageInitialize(){
     var ContentForPage=document.getElementById('content_rightInner');
     ContentForPage.appendChild(Object);
 }
-PageInitialize();
+PageInitialize(registList);
 
 
 function TouchedCircle(){

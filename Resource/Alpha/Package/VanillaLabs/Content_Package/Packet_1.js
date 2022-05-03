@@ -7,9 +7,9 @@ var i=0;
     }
 
     var defaultPacket={
-        title:'超鳄梨维生素C',
+        title:'鳄梨直饮维生素C',
         titleImg:'',
-        titleIntroduce:'',
+        titleIntroduce:'70%折扣中',
         contentImg:'',
         contentIntroduce:'',
         contentText:'',
