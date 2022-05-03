@@ -6,16 +6,15 @@ function PageInitialize(Object){
         '                <div class="content_rightInner_leftTitle" style="background: #000000">\n' +
         '                    <p class="content_rightInner_leftTitle_text">'+Object.title+'</p>\n' +
         '                </div>\n' +
-        '                <div class="content_rightInner_leftTitle" style="'+Object.backgroundColor+'">\n' +
+        '                <div class="content_rightInner_leftTitle" style="background:'+Object.backgroundColor+'">\n' +
         '                    <p class="content_rightInner_leftTitle_text">'+Object.titleIntroduce+'</p>\n' +
         '                </div>\n' +
         '            </div>\n' +
         '            <div id="content_rightInner_right"></div>';
 
-    var ContentForPage=document.getElementById('content_rightInner');
-    ContentForPage.appendChild(Object);
+    document.getElementById('content_rightInner').appendChild(element);
 }
-PageInitialize(registList);
+PageInitialize(registList[0]);
 
 function TouchedCircle(){
     var Circle_1=document.getElementById('a');

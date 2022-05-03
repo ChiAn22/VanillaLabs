@@ -8,7 +8,7 @@ var i=0;
 
     var defaultPacket={
         title:'鳄梨直饮维生素C',
-        titleImg:'',
+        titleImg:'../Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/TitleImg.png',
         titleIntroduce:'70%折扣中',
         contentImg:'',
         contentIntroduce:'',
