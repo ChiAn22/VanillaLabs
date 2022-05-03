@@ -14,7 +14,9 @@ function PageInitialize(Object){
 
     document.getElementById('content_rightInner').appendChild(element);
 }
-PageInitialize(registList[0]);
+
+PageInitialize(registList[0]);//(〃＾▽＾〃)
+
 
 function TouchedCircle(){
     var Circle_1=document.getElementById('a');
@@ -26,7 +28,6 @@ function TouchedCircleHidden(){
     Circle_1.style.setProperty('visibility','hidden');
     Circle_1.style.setProperty('opacity','0');
 }
-
 var aaa=document.documentElement;
 aaa.addEventListener("mousemove",(e)=>{
     var {clientX,clientY}=e;
