@@ -12,13 +12,10 @@ function PageInitialize(Object){
         '            </div>\n' +
         '            <div id="content_rightInner_right"></div>';
 
-
-
     var ContentForPage=document.getElementById('content_rightInner');
     ContentForPage.appendChild(Object);
 }
 PageInitialize(registList);
-
 
 function TouchedCircle(){
     var Circle_1=document.getElementById('a');
