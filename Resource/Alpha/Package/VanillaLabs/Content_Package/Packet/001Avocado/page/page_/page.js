@@ -2,6 +2,14 @@ function PageInitialize(Object){
     var element=document.createElement('div');
 
     element.className='content_rightInner_Content';
+    function moreType(){
+        var Type=Object.type;
+        for (let i=0;i<=Type.length;i++){
+
+        }
+
+    }
+
     element.innerHTML='<div id="content_rightInner_left">\n' +
         '                <div class="content_rightInner_leftTitle" style="background: #000000">\n' +
         '                    <p class="content_rightInner_leftTitle_text">'+Object.title+'</p>\n' +

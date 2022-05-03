@@ -16,6 +16,8 @@ var i=0;
         backgroundColor:'maroon',
         date:'',
         price:'2,000',
+        moreType:true,
+        type:['芒果味','桑葚味'],
         introPage_url:'../Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/page/page.html',
     }
     registContent(defaultPacket);

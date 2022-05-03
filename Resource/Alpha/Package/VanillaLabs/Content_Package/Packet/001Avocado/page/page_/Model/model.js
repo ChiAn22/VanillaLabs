@@ -29,7 +29,6 @@ scene.add(light2);
 scene.background=new THREE.Color(0x565656);
 
 camera.position.x = 4;
-camera.position.y = 2;
 
 const controls= new THREE.OrbitControls(camera,renderer.domElement);
 controls.addEventListener('change',renderer);
