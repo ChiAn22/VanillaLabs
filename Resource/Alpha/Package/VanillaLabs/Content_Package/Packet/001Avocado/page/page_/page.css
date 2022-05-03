@@ -33,6 +33,40 @@ body{
     display: flex;
     flex-direction: column;
 }
+#content_leftInner_text{
+    writing-mode: vertical-rl;
+    font-family: CodeText;
+    color: white;
+    font-size: 38px;
+}
+#content_rightInner{
+    width: 92%;
+    height:100%;
+    background: #2b2b2b;
+    padding: 20px;
+    display: flex;
+}
+#content_rightInner_left{
+    width: 50%;
+    height: 100%
+}
+#content_rightInner_right{
+    width: 50%;
+    height: 100%
+}
+
+.content_rightInner_leftTitle{
+    width:fit-content;
+    height:auto;
+}
+.content_rightInner_leftTitle_text{
+    font-family: CodeText;
+    margin:0 10px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
 #a{
     visibility: hidden;
     opacity: 0;
