@@ -2,8 +2,12 @@
 function Pickup(){//待会儿换了
     alert('a');
     let ub=document.getElementById('_titleImg').style;
+    let lab=document.getElementById('_labsImg').style;
     ub.transform='scale(0.8,0.8)';
-    setTimeout(function (){ub.transform='scale(0.8,0.8) translateY(+70px)';},1000);
+    setTimeout(function (){
+        ub.transform='scale(0.6,0.6) translateY(+20px)';
+        lab.transform='scale(1.1,1.1) translateY(-180px) translateX(-6px)'
+        },1000);
 }
 
 var Content_rightInner_right=document.getElementById('content_rightInner_right');

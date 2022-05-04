@@ -63,6 +63,7 @@ body{
     padding: 20px;
     background: #1a1a1a;
     display: flex;
+    overflow: hidden;
 }
 .content_rightInner_Content{
     width: 60%;
