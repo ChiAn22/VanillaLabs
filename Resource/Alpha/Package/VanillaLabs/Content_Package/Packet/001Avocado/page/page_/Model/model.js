@@ -1,6 +1,5 @@
 
 function Pickup(){//待会儿换了
-    alert('a');
     let ub=document.getElementById('_titleImg').style;
     let lab=document.getElementById('_labsImg').style;
     ub.transform='scale(0.8,0.8)';
@@ -51,6 +50,8 @@ controls.addEventListener('change',renderer);
 
 controls.enableDamping=true;
 controls.dampingFactor = 0.06;
+controls.enablePan=false;
+controls.enableZoom=false;
 
 function animate() {
     light2.position.set(camera.position.x,camera.position.y,camera.position.z);
