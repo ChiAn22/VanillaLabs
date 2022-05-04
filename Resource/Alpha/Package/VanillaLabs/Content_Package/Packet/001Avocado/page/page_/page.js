@@ -5,7 +5,9 @@ function PageInitialize(Object){
     function moreType(){
         var Type=Object.type;
         for (let i=0;i<=Type.length;i++){
-
+            let a=document.createElement('div');
+            a.className='content_rightInner_Type';
+            document.getElementById('content_rightInner_left_Type').appendChild(a);
         }
 
     }

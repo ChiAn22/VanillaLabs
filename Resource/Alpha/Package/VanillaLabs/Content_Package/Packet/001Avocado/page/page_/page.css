@@ -18,7 +18,17 @@ body{
     height: 100%;
     background: rgb(0, 0, 0);
 }
+._Medium_Font{
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: bold;
+}
+._Medium_Font_Lite{
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
 
+}
 #content{
     height: 100%;
     width: 100%;
@@ -39,10 +49,16 @@ body{
     color: white;
     font-size: 38px;
 }
+.Intro_Content_Text_Hr{
+    background: #e7e2dc;
+    border: none;
+    height: 0.2em;
+}
 #content_rightInner{
     width: 92%;
     height:100%;
     padding: 20px;
+    background: #1a1a1a;
 }
 .content_rightInner_Content{
     width: 100%;
@@ -69,6 +85,20 @@ body{
     font-weight: bold;
     color: #FFFFFF;
 }
+.content_rightInner_Type{
+    width: fit-content;
+    height: fit-content;
+    background: #000000;
+    padding: 6px 10px;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.content_rightInner_ContentInner{
+    width: 100%;
+    height: 100%;
+}
+
 
 #a{
     visibility: hidden;
