@@ -1,3 +1,11 @@
+
+function Pickup(){//待会儿换了
+    alert('a');
+    let ub=document.getElementById('_titleImg').style;
+    ub.transform='scale(0.8,0.8)';
+    setTimeout(function (){ub.transform='translateY(+70px)';},200);
+}
+
 var Content_rightInner_right=document.getElementById('content_rightInner_right');
 
 var CHeight,CWidth;
