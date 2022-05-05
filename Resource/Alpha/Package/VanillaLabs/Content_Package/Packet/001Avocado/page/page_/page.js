@@ -64,10 +64,10 @@ function PageInitialize(Object){
         '                            </div>\n' +
         '                            <div class="content_rightInner_ContentInner_Information_RightContent">\n' +
         '                                <div class="content_rightInner_ContentInner_Information_RightContent_Inner1">\n' +
-        '                                    <img src="../TitleImg.png" alt="" id="_titleImg">\n' +
+        '                                    <img src="./../TitleImg.png" alt="" id="_titleImg">\n' +
         '                                </div>\n' +
         '                                <div class="content_rightInner_ContentInner_Information_RightContent_Inner2">\n' +
-        '                                    <img src="../labs.png" alt="" id="_labsImg">\n' +
+        '                                    <img src="./../labs.png" alt="" id="_labsImg">\n' +
         '                                </div>\n' +
         '                                <div class="content_rightInner_ContentInner_Information_RightContent_Inner3" onclick="Pickup()">\n' +
         '                                    <div class="pick_up">\n' +
