@@ -12,12 +12,29 @@ var i=0;
         titleIntroduce:'70%折扣中',
         contentImg:'',
         contentIntroduce:'',
-        contentText:'',
+        contentText:'无内容',
+        productionPlaceOfOrigin:'西馆区木鹫',
         backgroundColor:'maroon',
         date:'',
         price:'2,000',
         moreType:true,
-        type:['芒果味','桑葚味'],
+        type:[
+            Type1={
+                name:'鳄梨味',
+                imgUrl:'./../TitleImg.png',
+            },
+            Type2={
+                name:'芒果味',
+                imgUrl:'./../TitleImgType2.png'
+            },
+            Type3={
+                name:'樱花味',
+                imgUrl:'./../TitleImgType3.png'
+            },
+            Type4={
+                name:'桑葚味',
+                imgUrl:'./../TitleImgType4.png'
+            }],
         introPage_url:'./../../Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/page/page.html',
     }
     registContent(defaultPacket);

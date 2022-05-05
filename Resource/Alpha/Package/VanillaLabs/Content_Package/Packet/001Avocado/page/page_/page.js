@@ -8,38 +8,46 @@ function Pickup(){//(〃＾▽＾〃)//
     },1000);
 }
 
+function typeClicked(type){
+
+
+}
+
 function PageInitialize(Object){
     var element=document.createElement('div');
     var element2=document.createElement('div');
+    var element3='';
+    let TitleImg=Object.type[0].imgUrl;
 
     element2.id='content_rightInner_right';
     element.className='content_rightInner_Content';
-    function moreType(){
-        var Type=Object.type;
-        for (let i=0;i<=Type.length;i++){
-            let a=document.createElement('div');
-            a.className='content_rightInner_Type';
-            document.getElementById('content_rightInner_left_Type').appendChild(a);
-        }
 
+    function moreType(Object){
+        var Type=Object.type;
+        for (let i=0;i<=Type.length-1;i++){
+            let a='<div class="content_rightInner_Type" onclick="typeClicked(Object.type'+[i]+')">'+Object.type[i].name+'</div>'+'\n';
+            element3=element3+a;
+        }
+    }
+
+    if(Object.moreType===true){
+        moreType(Object);
     }
 
     element.innerHTML='<div id="content_rightInner_left">\n' +
         '                    <div style="height: 26%;width: 100%">\n' +
         '                        <div class="content_rightInner_leftTitle" style="background: #000000">\n' +
-        '                            <p class="content_rightInner_leftTitle_text">\'+Object.title+\'</p>\n' +
+        '                            <p class="content_rightInner_leftTitle_text">'+Object.title+'</p>\n' +
         '                        </div>\n' +
-        '                        <div class="content_rightInner_leftTitle" style="background:#FF0000">\n' +
-        '                            <p class="content_rightInner_leftTitle_text">\'+Object.titleIntroduce+\'</p>\n' +
+        '                        <div class="content_rightInner_leftTitle" style="background:'+Object.backgroundColor+'">\n' +
+        '                            <p class="content_rightInner_leftTitle_text">'+Object.titleIntroduce+'</p>\n' +
         '                        </div>\n' +
         '                    </div>\n' +
         '                    <div class="content_rightInner_ContentInner">\n' +
         '                        <div class="content_rightInner_ContentInner_Text">\n' +
         '                            <div class="content_rightInner_ContentInner_Text_Inner">\n' +
         '                                <p class="_Medium_Font" style="align-items: center;display: flex">商品种类</p>\n' +
-        '                                <div id="content_rightInner_left_Type">\n' +
-        '                                    <div class="content_rightInner_Type">芒果味</div>\n' +
-        '                                    <div class="content_rightInner_Type">桑葚味</div>\n' +
+        '                                <div id="content_rightInner_left_Type">\n' + element3 +
         '                                </div>\n' +
         '                            </div>\n' +
         '                            <hr class="Intro_Content_Text_Hr">\n' +
@@ -47,7 +55,7 @@ function PageInitialize(Object){
         '                        <div class="content_rightInner_ContentInner_Text">\n' +
         '                            <div class="content_rightInner_ContentInner_Text_Inner">\n' +
         '                                <p class="_Medium_Font" style="align-items: center;display: flex">原产地</p>\n' +
-        '                                <p class="_Medium_Font_Lite" style="margin-left: 10px;display: flex;align-items: center">aaa</p>\n' +
+        '                                <p class="_Medium_Font_Lite" style="margin-left: 10px;display: flex;align-items: center">'+Object.productionPlaceOfOrigin+'</p>\n' +
         '                            </div>\n' +
         '                            <hr class="Intro_Content_Text_Hr">\n' +
         '                        </div>\n' +
@@ -59,12 +67,12 @@ function PageInitialize(Object){
         '                        <div class="content_rightInner_ContentInner_Information" style="margin-top: 2%">\n' +
         '                            <div class="content_rightInner_ContentInner_Information_LeftContent">\n' +
         '                                <div style="height: 20%;width: 80%;" class="_Medium_Font_NoSize">\n' +
-        '                                    <p>内容</p>\n' +
+        '                                    <p>'+Object.contentText+'</p>\n' +
         '                                </div>\n' +
         '                            </div>\n' +
         '                            <div class="content_rightInner_ContentInner_Information_RightContent">\n' +
         '                                <div class="content_rightInner_ContentInner_Information_RightContent_Inner1">\n' +
-        '                                    <img src="./../TitleImg.png" alt="" id="_titleImg">\n' +
+        '                                    <img src="'+TitleImg+'" alt="" id="_titleImg">\n' +
         '                                </div>\n' +
         '                                <div class="content_rightInner_ContentInner_Information_RightContent_Inner2">\n' +
         '                                    <img src="./../labs.png" alt="" id="_labsImg">\n' +
