@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        text-decoration: none;
+    }
+</style>
+<script>
+    function msg(){
+        let n='  ';
+        alert(
+            '制作名单:\n'+
+            '韦一航'+n+
+            '马源祥'+n+
+            '张毅'+n+
+            '司俊豪'+n+
+            '耿伟东'+n+'\n\n'+
+            '作业所使用的资源材料(例如图片、模型等)均为自主独立创作，内容所包含的商品、时间、地点等要素纯属虚构。');
+
+    }
+    function copy() {
+        navigator.clipboard.writeText('http://localhost:8000/');
+    }
+</script>
+<body onload="msg()">
+    <p style="font-size: 28px;font-weight: bold">1. 首先需要一个Node.js</p>
+    <p style="font-size: 10px;font-weight: bold">如果电脑安装了Node.js，请跳过该步骤</p>
+    <a href="Resource/File/node-v18.1.0-x64.msi" download="node-v18.1.0-x64.msi">
+        <input type="button" value="点击此处安装">
+    </a>
+    <br>
+    <br>
+    <p style="font-size: 28px;font-weight: bold">2. 打开cmd，在作业的内容根路径输入下列内容(作业名：VanillaLabs)</p>
+<div style="width: 200px;height: 20px;background: #1b5743">
+    <p style="font-size: 10px;font-weight: bold;color: #FFFFFF;margin-left: 6px">
+        npm install http-server
+    </p>
+</div>
+    <p style="font-size: 10px;font-weight: bold">例如我将作业拷贝在了E盘，那么cmd里就应该是：<span style="font-size: 10px;font-weight: bold;color: #388c73">E:\VanillaLabs> npm install http-server</span></p>
+    <br>
+    <p style="font-size: 10px;font-weight: bold">安装完成后，在cmd中输入以下内容：</p>
+    <div style="width: 200px;height: 20px;background: #1b5743">
+        <p style="font-size: 10px;font-weight: bold;color: #FFFFFF;margin-left: 6px">
+            http-server -p 8000
+        </p>
+    </div>
+    <br>
+    <br>
+    <div style="width: 200px;height: fit-content;background: #e7e2dc">
+        <p style="font-size: 10px;font-weight: bold">备注</p>
+    </div>
+    <div style="width: 800px;height: fit-content;background: #e7e2dc">
+        <p style="font-size: 10px;font-weight: bold">上一步骤是为了服务JS在本地开了一个服务器。<br>
+            因浏览器涉及本地文件的安全策略，一些资源文件不能以传统本地路径的方法在JS中加载。<br>
+            (｡•́︿•̀｡)<br>
+            在本地服务器开启的过程中，才能保证最佳的网页浏览效果。<br>
+            如果需要关闭本地服务器，那么在cmd中按<span style="font-size: 10px;font-weight: bold;color: #af1b1b">Ctrl + C</span>即可<br>
+        </p>
+    </div>
+    <br>
+    <p style="font-size: 28px;font-weight: bold">3. Enjoy!</p>
+    <p style="font-size: 10px;font-weight: bold">一切准备就绪，准备漫游【香草实验室(Vanilla Labs)】。</p>
+    <a href="http://localhost/Content/index.html" target="_blank">
+        <input type="button" value="进入【香草实验室】">
+    </a>
+        <input type="button" onclick="copy()" value="复制地址" title="http//localhost:8000/(你要访问的目标)">
+</body>
+</html>
