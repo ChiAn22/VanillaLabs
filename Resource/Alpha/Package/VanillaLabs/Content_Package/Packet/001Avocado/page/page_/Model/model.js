@@ -13,8 +13,9 @@ renderer.setSize( CWidth, CHeight );
 
 Content_rightInner_right.appendChild( renderer.domElement );
 
+
 var loader = new THREE.GLTFLoader();
-loader.load("avocado.gltf", function(gltf) {
+loader.load('avocado.gltf', function(gltf) {
     scene.add(gltf.scene);
     gltf.scene.position.y-=1;
     gltf.scene.rotation.y=2.8;
