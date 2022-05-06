@@ -1,2 +1,4 @@
 http://172.29.115.44:8000(part)
 /Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/page/page.html
+npm install http-server -g
+http-server -p 8000
