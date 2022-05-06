@@ -2,11 +2,16 @@
     font-family: 'CodeText';
     src: url("./../../../../../../../../Font/CodeNext-SemiBold.otf");
 }
+@font-face {
+    font-family: 'SansText';
+    src: url("./../../../../../../../../Font/TaipeiSansTCBeta-Bold.ttf");
+}
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: SansText;
 }
 
 html{
@@ -71,7 +76,7 @@ body{
     display: flex;
 }
 #content_rightInner_left{
-    width: 80%;
+    width: 90%;
     height: 100%
 }
 #content_rightInner_right{
@@ -133,9 +138,9 @@ body{
     margin-top: 6px;
     width: 50%;
     height: 100%;
-    background: #FFFFFF;
+    background: #2b2b2b;
     display: flex;
-    padding: 10px;
+    padding: 16px;
 }
 .content_rightInner_ContentInner_Information_RightContent{
     margin-top: 6px;
@@ -149,6 +154,8 @@ body{
     height: 70%;
     width: 100%;
     background: #171717;
+    display: flex;
+    justify-content: center;
 }
 .content_rightInner_ContentInner_Information_RightContent_Inner2{
     height: 4%;
@@ -164,10 +171,12 @@ body{
     z-index: 7;
 }
 #_titleImg{
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
     position: relative;
     z-index: 5;
+    visibility:visible;
+    opacity: 1;
     transition: 0.5s;
 }
 #_labsImg{
@@ -175,6 +184,8 @@ body{
     height: auto;
     position: relative;
     z-index: 6;
+    visibility:visible;
+    opacity: 1;
     transition: 0.5s;
     mix-blend-mode: lighten;
     transform:scale(1.1,1.1) translateY(200px) translateX(-6px)
@@ -184,13 +195,29 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
-    cursor: pointer
+    overflow: hidden;
 }
 #pick_up_text{
     display: flex;
     align-items: center;
-    font-size: 28px;
-    color: #FFFFFF;
+    font-size: 16px;
+    color: #ffffff;
+}
+.touch{
+    transition: 0.3s;
+    transform: scale(1,1);
+}
+.touch:hover{
+    transform: scale(1.02,1.02);
+}
+.touch2{
+    transition: 0.3s;
+    transform: scale(1,1);
+    border-radius: 0;
+}
+.touch2:hover{
+    transform: scale(1.06,1.06);
+    border-radius: 10px;
 }
 #a{
     visibility: hidden;

@@ -7,15 +7,17 @@ var i=0;
     }
 
     var defaultPacket={
-        title:'鳄梨直饮维生素C',
+        title:'直饮果味维生素C',
         titleImg:'./../../Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/TitleImg.png',
         titleIntroduce:'70%折扣中',
         contentImg:'',
-        contentIntroduce:'',
-        contentText:'无内容',
-        productionPlaceOfOrigin:'西馆区木鹫',
-        backgroundColor:'maroon',
-        date:'',
+        contentIntroduce:'净含量：700ml',
+        contentText:['本商品符合Argeement 3rd For Life Station功能性饮用物生产规范','无内容','本商品不能替代药物。'],
+        company:'墨西伊子生物',
+        productionPlaceOfOriginLite:'西馆区墨沿',
+        productionPlaceOfOrigin:'全港市首都内 西馆区墨沿-木鹫 CBD底环辅路103号',
+        backgroundColor:'#800000',
+        date:'2085年1月',
         price:'2,000',
         moreType:true,
         type:[
@@ -24,7 +26,7 @@ var i=0;
                 imgUrl:'./../TitleImg.png',
             },
             Type2={
-                name:'芒果味',
+                name:'杏桃味',
                 imgUrl:'./../TitleImgType2.png'
             },
             Type3={

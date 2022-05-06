@@ -2,6 +2,10 @@
     font-family: 'CodeText';
     src: url("./../../Resource/Font/CodeNext-SemiBold.otf");
 }
+@font-face {
+    font-family: 'SansText';
+    src: url("./../../Resource/Font/CodeNext-SemiBold.otf");
+}
 
 *{
     margin: 0;
@@ -9,6 +13,7 @@
     box-sizing: border-box;
     text-decoration: none;
     color: #212121;
+    font-family: SansText;
 }
 
 html{
