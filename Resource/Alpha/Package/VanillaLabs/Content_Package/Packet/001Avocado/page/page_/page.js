@@ -1,8 +1,21 @@
 let list=0;
 let H=registList[list];
 let TitleImg=H.type[0].imgUrl;
+let a=registList[0].type[0];
 
-function Pickup(){//(〃＾▽＾〃)//
+function Pickup(type){//(〃＾▽＾〃)//
+    window.localStorage.setItem('cart','aaa'+','+'bbb'+','+String(type)+','+'ccc')
+    let cartList_Text = window.localStorage.getItem('cart');
+    for(let i=0;i<=cartList_Text.split(',').length;i++){
+        if(cartList_Text.split(',')[i]===String(type)){
+            alert('a');
+        }else {
+            alert('b');
+        }
+    }
+    cartList_Text.split(',');
+
+
     let ub=document.getElementById('_titleImg').style;
     let lab=document.getElementById('_labsImg').style;
     ub.transitionDuration='1s';
@@ -49,6 +62,7 @@ function Pickup(){//(〃＾▽＾〃)//
 
 function typeClicked(type){
     document.getElementById('_titleImg').src=type.imgUrl;
+    a=type;
 }
 
 function PageInitialize(Object){
@@ -128,7 +142,7 @@ function PageInitialize(Object){
         '                                    <div class="pick_up">\n' +
         '                                        <div style="width: 25%;height: 100%"></div>'+
         '                                        <div style="width: 25%;height: 100%"></div>'+
-        '                                        <div style="width: 50%;height: 100%;padding: 3%;cursor: pointer" class="touch" onclick="Pickup()">' +
+        '                                        <div style="width: 50%;height: 100%;padding: 3%;cursor: pointer" class="touch" onclick="Pickup(a)">' +
         '<div style="width: 100%;height: 100%;background: #141414;border-radius: 8px;display: flex;justify-content: center">' +
         '<p id="pick_up_text">加入购物车</p>' +
         '</div>' +
