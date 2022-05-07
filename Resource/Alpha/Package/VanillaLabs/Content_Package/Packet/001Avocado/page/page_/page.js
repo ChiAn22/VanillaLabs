@@ -6,7 +6,7 @@ let a=registList[0].type[0];
 function Pickup(type){//(〃＾▽＾〃)//
     window.localStorage.setItem('cart','aaa'+','+'bbb'+','+String(type)+','+'ccc')
     let cartList_Text = window.localStorage.getItem('cart');
-    for(let i=0;i<=cartList_Text.split(',').length;i++){
+    for(let i=0;i<=cartList_Text.split(',').length-1;i++){
         if(cartList_Text.split(',')[i]===String(type)){
             alert('a');
         }else {
