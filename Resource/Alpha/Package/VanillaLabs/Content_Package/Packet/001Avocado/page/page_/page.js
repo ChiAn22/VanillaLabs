@@ -4,17 +4,16 @@ let TitleImg=H.type[0].imgUrl;
 let a=registList[0].type[0];
 
 function Pickup(type){//(〃＾▽＾〃)//
-    window.localStorage.setItem('cart','aaa'+','+'bbb'+','+String(type)+','+'ccc')
+
+    window.localStorage.setItem('cart','aaa'+'#,'+'bbb'+'#,'+JSON.stringify(type)+'#,'+'ccc')
     let cartList_Text = window.localStorage.getItem('cart');
-    for(let i=0;i<=cartList_Text.split(',').length-1;i++){
-        if(cartList_Text.split(',')[i]===String(type)){
-            alert('a');
+    for(let i=0;i<=cartList_Text.split('#,').length-1;i++){
+        if(cartList_Text.split('#,')[i]===JSON.stringify(type)){
+            alert(cartList_Text.split('#,')[i]);
         }else {
             alert('b');
         }
     }
-    cartList_Text.split(',');
-
 
     let ub=document.getElementById('_titleImg').style;
     let lab=document.getElementById('_labsImg').style;
