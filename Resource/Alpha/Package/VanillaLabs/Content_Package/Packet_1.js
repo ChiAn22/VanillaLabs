@@ -11,6 +11,7 @@ var i=0;
         titleImg:'./../../Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/TitleImg.png',
         titleIntroduce:'70%折扣中',
         contentImg:'',
+        contentQRCodeUrl:'./../QRcode.png',
         contentIntroduce:'净含量：700ml',
         contentText:['本商品符合Argeement 3rd For Life Station功能性饮用物生产规范','无内容','本商品不能替代药物。'],
         company:'墨西伊子生物',

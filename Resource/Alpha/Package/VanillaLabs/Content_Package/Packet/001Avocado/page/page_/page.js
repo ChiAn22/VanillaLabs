@@ -4,60 +4,69 @@ let TitleImg=H.type[0].imgUrl;
 let a=registList[0].type[0];
 
 window.ondblclick=function (){
-    if(confirm()===true){
+    if(confirm('测试')===true){
         window.localStorage.setItem('cart','');
         alert('clear\n');
     }else {
         alert(window.localStorage.getItem('cart'));
+        alert(window.innerHeight+','+window.innerWidth)
     }
 
 }
-
+let OnPickUp=false;
 function Pickup(type){//(〃＾▽＾〃)//
-    window.localStorage.setItem('cart',window.localStorage.getItem('cart')+JSON.stringify(type)+'#,');
-
-    let ub=document.getElementById('_titleImg').style;
-    let lab=document.getElementById('_labsImg').style;
-    ub.transitionDuration='1s';
-    lab.transitionDuration='1s';
-    ub.transitionTimingFunction='ease-in';
-    lab.transitionTimingFunction='ease-in';
-    ub.transform='scale(0.8,0.8)';
-    setTimeout(function (){
-        ub.transitionTimingFunction='ease-out';
-        lab.transitionTimingFunction='ease-out';
-        ub.transform='scale(0.6,0.6) translateY(+10px)';
-        lab.transform='scale(1,1) translateY(-220px) translateX(-6px)'
-    },1000);
-    setTimeout(function (){
-        ub.transitionDuration='2s';
-        lab.transitionDuration='2s';
+    if(OnPickUp===false){
+        setTimeout(function (){OnPickUp=false},5100);
+        OnPickUp=true;
+        window.localStorage.setItem('cart',window.localStorage.getItem('cart')+JSON.stringify(type)+'#,');
+        let ub=document.getElementById('_titleImg').style;
+        let lab=document.getElementById('_labsImg').style;
+        ub.transitionDuration='1s';
+        lab.transitionDuration='1s';
         ub.transitionTimingFunction='ease-in';
         lab.transitionTimingFunction='ease-in';
-        ub.transform='scale(0.6,0.6) translateY(+1100px)';
-        lab.transform='scale(1,1) translateY(+400px) translateX(-6px)'
-    },2500);
-    setTimeout(function (){
-        ub.transitionDuration='0.1s';
-        lab.transitionDuration='0.1s';
-        ub.setProperty('visibility','hidden');
-        ub.setProperty('opacity','0');
-    },4500);
-    setTimeout(function (){
-        ub.transitionDuration='0s';
-        lab.transitionDuration='0s';
-        ub.transform='scale(0.8,0.8) translateY(0px)';
-        lab.transform='scale(1,1) translateY(200px) translateX(-6px)'
-    },4800);
-    setTimeout(function (){
-        ub.transitionDuration='0.5s';
-        lab.transitionDuration='0.5s';
-        ub.transitionTimingFunction='ease-out';
-        lab.transitionTimingFunction='ease-out';
-        ub.transform='scale(1,1)';
-        ub.setProperty('visibility','visible');
-        ub.setProperty('opacity','1');
-    },5000);
+        ub.transform='scale(0.8,0.8)';
+        setTimeout(function (){
+            ub.transitionTimingFunction='ease-out';
+            lab.transitionTimingFunction='ease-out';
+            ub.transform='scale(0.6,0.6) translateY(+10px)';
+            lab.transform='scale(1,1) translateY(-220px) translateX(-6px)'
+        },1000);
+        setTimeout(function (){
+            ub.transitionDuration='2s';
+            lab.transitionDuration='2s';
+            ub.transitionTimingFunction='ease-in';
+            lab.transitionTimingFunction='ease-in';
+            ub.transform='scale(0.6,0.6) translateY(+700px)';
+            lab.transform='scale(1,1) translateY(200px) translateX(-6px)'
+        },2500);
+        setTimeout(function (){
+            ub.transitionDuration='0.1s';
+            lab.transitionDuration='0.1s';
+            ub.setProperty('visibility','hidden');
+            ub.setProperty('opacity','0');
+        },4500);
+        setTimeout(function (){
+            ub.transitionDuration='0s';
+            lab.transitionDuration='0s';
+            ub.transform='scale(0.8,0.8) translateY(0px)';
+            lab.transform='scale(1,1) translateY(200px) translateX(-6px)'
+        },4800);
+        setTimeout(function (){
+            ub.transitionDuration='0.5s';
+            lab.transitionDuration='0.5s';
+            ub.transitionTimingFunction='ease-out';
+            lab.transitionTimingFunction='ease-out';
+            ub.transform='scale(1,1)';
+            ub.setProperty('visibility','visible');
+            ub.setProperty('opacity','1');
+        },5000);
+    }else {
+        console.log('正在包装中');
+    }
+
+
+
 }
 
 function typeClicked(type){
@@ -120,18 +129,21 @@ function PageInitialize(Object){
         '                        </div>\n' +
         '                        <div class="content_rightInner_ContentInner_Information" style="margin-top: 2%">\n' +
         '                            <div class="content_rightInner_ContentInner_Information_LeftContent">\n' +
-        '                                <div style="height: 20%;width: 100%;line-height: 16px" class="_Medium_Font_NoSize">\n' +
+        '                                <div style="height: 100%;width: 100%;line-height: 16px;overflow: hidden" class="_Medium_Font_NoSize">\n' +
         '                                    <p style="font-size: 14px;font-weight: bold;color: white;margin-bottom: 6px">单价：'+Object.price+'</p>\n' +
         '                                    <p style="font-size: 14px;font-weight: bold;color: white;margin-bottom: 6px">'+Object.contentIntroduce+'</p>\n' +
         '                                    <p style="font-size: 14px;font-weight: bold;color: white;margin-bottom: 6px">生产商：'+Object.company+'</p>\n' +
         '                                    <p style="font-size: 14px;font-weight: bold;color: white;margin-bottom: 6px">产地信息：'+Object.productionPlaceOfOrigin+'</p>\n' +
         '                                    <p style="font-size: 14px;font-weight: bold;color: white;margin-top: 20px;margin-bottom: 20px">即刻下单，发货源为：'+Object.date+' (生产日期)</p>\n' +
+        '                                   <div class="content_rightInner_ContentInner_Information_QRcode">' +
+        '                                        <img src="'+Object.contentQRCodeUrl+'" alt="" id="_QRcode">' +
+        '                                   </div>'+
         '                                    <p style="font-size: 8px;font-weight: bold;color: white;margin-bottom: 4px">'+Object.contentText[0]+'</p>\n' +
         '                                    <p style="font-size: 10px;font-weight: bold;color: white;margin-bottom: 4px">'+Object.contentText[1]+'</p>\n' +
         '                                    <p style="font-size: 10px;font-weight: bold;color: brown;margin-bottom: 4px">'+Object.contentText[2]+'</p>\n' +
         '                                </div>\n' +
         '                            </div>\n' +
-        '                            <div class="content_rightInner_ContentInner_Information_RightContent">\n' +
+        '                            <div class="content_rightInner_ContentInner_Information_RightContent" style="overflow: hidden">\n' +
         '                                <div class="content_rightInner_ContentInner_Information_RightContent_Inner1">\n' +
         '                                    <img src="'+TitleImg+'" alt="" id="_titleImg">\n' +
         '                                </div>\n' +

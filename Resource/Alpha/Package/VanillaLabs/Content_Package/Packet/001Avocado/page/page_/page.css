@@ -17,6 +17,8 @@
 html{
     width: 100%;
     height: 100%;
+    min-height: 750px;
+    min-width: 1530px;
 }
 body{
     width: 100%;
@@ -71,16 +73,16 @@ body{
     overflow: hidden;
 }
 .content_rightInner_Content{
-    width: 60%;
+    width: 58%;
     height: 100%;
     display: flex;
 }
 #content_rightInner_left{
-    width: 90%;
+    width: 96%;
     height: 100%
 }
 #content_rightInner_right{
-    width: 40%;
+    width: 42%;
     height: 100%;
     display: flex;
 }
@@ -150,12 +152,22 @@ body{
     display: flex;
     flex-direction: column;
 }
+.content_rightInner_ContentInner_Information_QRcode{
+    height: 16%;
+    width: fit-content;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 5%;
+    border-radius: 4px;
+    overflow: hidden;
+}
 .content_rightInner_ContentInner_Information_RightContent_Inner1{
     height: 70%;
     width: 100%;
     background: #171717;
     display: flex;
     justify-content: center;
+
 }
 .content_rightInner_ContentInner_Information_RightContent_Inner2{
     height: 4%;
@@ -178,6 +190,10 @@ body{
     visibility:visible;
     opacity: 1;
     transition: 0.5s;
+}
+#_QRcode{
+    width: auto;
+    height: 100%;
 }
 #_labsImg{
     width: 100%;
