@@ -3,17 +3,18 @@ let H=registList[list];
 let TitleImg=H.type[0].imgUrl;
 let a=registList[0].type[0];
 
-function Pickup(type){//(〃＾▽＾〃)//
-
-    window.localStorage.setItem('cart','aaa'+'#,'+'bbb'+'#,'+JSON.stringify(type)+'#,'+'ccc')
-    let cartList_Text = window.localStorage.getItem('cart');
-    for(let i=0;i<=cartList_Text.split('#,').length-1;i++){
-        if(cartList_Text.split('#,')[i]===JSON.stringify(type)){
-            alert(cartList_Text.split('#,')[i]);
-        }else {
-            alert('b');
-        }
+window.ondblclick=function (){
+    if(confirm()===true){
+        window.localStorage.setItem('cart','');
+        alert('clear\n');
+    }else {
+        alert(window.localStorage.getItem('cart'));
     }
+
+}
+
+function Pickup(type){//(〃＾▽＾〃)//
+    window.localStorage.setItem('cart',window.localStorage.getItem('cart')+JSON.stringify(type)+'#,');
 
     let ub=document.getElementById('_titleImg').style;
     let lab=document.getElementById('_labsImg').style;
