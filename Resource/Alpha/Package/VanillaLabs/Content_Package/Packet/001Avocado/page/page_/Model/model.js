@@ -31,7 +31,7 @@ scene.add(light3);
 light3.position.y=3;
 light3.position.x=2;
 light3.position.z=-2;
-scene.background=new THREE.Color(0x141414);
+scene.background=new THREE.Color(0x2b2b2b);
 
 camera.position.x = 4;
 

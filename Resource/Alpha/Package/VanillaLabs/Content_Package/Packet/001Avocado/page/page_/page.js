@@ -102,7 +102,7 @@ function PageInitialize(Object){
         '                        <div class="content_rightInner_leftTitle" style="background: #ffffff">\n' +
         '                            <p class="content_rightInner_leftTitle_text" style="color: #212121">'+Object.title+'</p>\n' +
         '                        </div>\n' +
-        '                        <div class="content_rightInner_leftTitle" style="background:'+Object.backgroundColor+'">\n' +
+        '                        <div class="content_rightInner_leftTitle" style="background:linear-gradient(45deg, #1b5743, #388c73, #62a43b)">\n' +
         '                            <p class="content_rightInner_leftTitle_text" style="font-size: 26px">'+Object.titleIntroduce+'</p>\n' +
         '                        </div>\n' +
         '                    </div>\n' +
@@ -124,13 +124,13 @@ function PageInitialize(Object){
         '                        </div>\n' +
         '                        <div class="content_rightInner_ContentInner_Text" style="margin-bottom: 0">\n' +
         '                            <div class="content_rightInner_ContentInner_Text_Inner">\n' +
-        '                                <p class="_Medium_Font" style="align-items: center;display: flex">详细</p>\n' +
+        '                                <p class="_Medium_Font" style="align-items: center;display: flex">单价：'+Object.price+'</p>\n' +
         '                            </div>\n' +
         '                        </div>\n' +
         '                        <div class="content_rightInner_ContentInner_Information" style="margin-top: 2%">\n' +
         '                            <div class="content_rightInner_ContentInner_Information_LeftContent">\n' +
         '                                <div style="height: 100%;width: 100%;line-height: 16px;overflow: hidden" class="_Medium_Font_NoSize">\n' +
-        '                                    <p style="font-size: 14px;font-weight: bold;color: white;margin-bottom: 6px">单价：'+Object.price+'</p>\n' +
+        '                                    <p style="font-size: 14px;font-weight: bold;color: white;margin-bottom: 6px">详细</p>\n' +
         '                                    <p style="font-size: 14px;font-weight: bold;color: white;margin-bottom: 6px">'+Object.contentIntroduce+'</p>\n' +
         '                                    <p style="font-size: 14px;font-weight: bold;color: white;margin-bottom: 6px">生产商：'+Object.company+'</p>\n' +
         '                                    <p style="font-size: 14px;font-weight: bold;color: white;margin-bottom: 6px">产地信息：'+Object.productionPlaceOfOrigin+'</p>\n' +
@@ -140,7 +140,7 @@ function PageInitialize(Object){
         '                                   </div>'+
         '                                    <p style="font-size: 8px;font-weight: bold;color: white;margin-bottom: 4px">'+Object.contentText[0]+'</p>\n' +
         '                                    <p style="font-size: 10px;font-weight: bold;color: white;margin-bottom: 4px">'+Object.contentText[1]+'</p>\n' +
-        '                                    <p style="font-size: 10px;font-weight: bold;color: brown;margin-bottom: 4px">'+Object.contentText[2]+'</p>\n' +
+        '                                    <p style="font-size: 10px;font-weight: bold;color: #5fc071;margin-bottom: 4px">'+Object.contentText[2]+'</p>\n' +
         '                                </div>\n' +
         '                            </div>\n' +
         '                            <div class="content_rightInner_ContentInner_Information_RightContent" style="overflow: hidden">\n' +
@@ -152,13 +152,21 @@ function PageInitialize(Object){
         '                                </div>\n' +
         '                                <div class="content_rightInner_ContentInner_Information_RightContent_Inner3">\n' +
         '                                    <div class="pick_up">\n' +
-        '                                        <div style="width: 25%;height: 100%"></div>'+
-        '                                        <div style="width: 25%;height: 100%"></div>'+
-        '                                        <div style="width: 50%;height: 100%;padding: 3%;cursor: pointer" class="touch" onclick="Pickup(a)">' +
-        '<div style="width: 100%;height: 100%;background: #141414;border-radius: 8px;display: flex;justify-content: center">' +
-        '<p id="pick_up_text">加入购物车</p>' +
-        '</div>' +
+        '                                        <div style="width: 25%;height: 100%;padding:3% 0 3% 3%;cursor: pointer" class="touch">' +
+        '                                           <div style="width: 100%;height: 100%;background: #2b2b2b;border-radius: 8px;display: flex;justify-content: center">' +
+        '                                               <p id="pick_up_text">分享</p>' +
+        '                                           </div>' +
         '</div>'+
+        '                                        <div style="width: 25%;height: 100%;padding:3% 0 3% 3%;cursor: pointer" class="touch">' +
+        '                                           <div style="width: 100%;height: 100%;background: #2b2b2b;border-radius: 8px;display: flex;justify-content: center">' +
+        '                                               <p id="pick_up_text">收藏</p>' +
+        '                                           </div>' +
+        '</div>'+
+        '                                        <div style="width: 50%;height: 100%;padding: 3%;cursor: pointer" class="touch" onclick="Pickup(a)">' +
+        '                                           <div style="width: 100%;height: 100%;background:white;border-radius: 8px;display: flex;justify-content: center">' +
+        '                                               <p id="pick_up_text" style="color: #212121">加入购物车</p>' +
+        '                                           </div>' +
+        '                                        </div>'+
         '                                    </div>\n' +
         '                                </div>\n' +
         '                            </div>\n' +
