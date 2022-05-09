@@ -3,7 +3,6 @@ window.onload=function (){
     if("string" !== typeof window.localStorage.getItem('User_Archive_Na')){
         window.localStorage.setItem('User_Archive_Na','0');
     }
-    alert(window.localStorage.getItem('User_Archive_Na'));
 }
 
 function ClickedForSignUp(){
