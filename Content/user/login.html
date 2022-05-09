@@ -17,25 +17,27 @@
 
     <div id="content_leftInner" onmousemove="TouchedCircle()" onmouseleave="TouchedCircleHidden()">
         <div class="content_leftInner_listHiddenBackground" style="background: none;height: 100%;width: 100%">
-            <div style="height: 100%;width: 100%;background: #388c73;display: flex;flex-direction: column;justify-content: center;align-items: center">
+            <div style="height: 100%;width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center">
                 <p id="content_leftInner_text">
                     Vanilla Labs
                 </p>
-                <div style="background: #e2992b;height: 40%;width: 60%;display: flex;align-items: center;justify-content: center" id="_signUp">
-                    <div style="height:100%;width: 60%;background: #1b5743;display: flex;flex-direction: column;justify-content: center;">
-                        <div style="height: fit-content;width: 100%;display: flex;justify-content: right">
-                            <label for="_Email" style="text-align: right">有效电子邮箱</label><input type="email" id="_Email" style="width: 50%">
+                <div style="height: 40%;width: 60%;display: flex;align-items: center;justify-content: center" id="_signUp">
+                    <div style="height: 100%;width: 100%;display: flex;justify-content: center;align-items: center">
+                        <div style="height:60%;width: 40%;display: flex;flex-direction: column;justify-content: center;">
+                            <div style="height: 10%;width: 100%;display: flex;justify-content: right;margin-bottom: 2%">
+                                <label for="_Email" class="_whiteColorFont">有效电子邮箱</label><input type="email" id="_Email" style="width: 60%;height: 100%;margin-left: 6%;border-radius: 6px;border: none">
+                            </div>
+
+                            <div style="height: 10%;width: 100%;display: flex;justify-content: right;margin-bottom: 2%">
+                                <label for="_UserName" class="_whiteColorFont">用户名</label><input type="text" id="_UserName" style="width: 60%;height: 100%;margin-left: 6%;border-radius: 6px;border: none">
+                            </div>
+
+                            <div style="height: 10%;width: 100%;display: flex;justify-content: right;margin-bottom: 2%">
+                                <label for="_Birthday" class="_whiteColorFont">生日</label><input type="date" id="_Birthday" style="width: 60%;height: 100%;margin-left: 6%;border-radius: 6px;border: none">
+                            </div>
+
                         </div>
-
-                        <div style="height: fit-content;width: 100%;display: flex;justify-content: right">
-                            <label for="_UserName" style="text-align: right">用户名</label><input type="text" id="_UserName" style="width: 50%">
-                        </div>
-
                     </div>
-                    <div style="height:100%;width: 40%;background: #4a45c0;display: flex;flex-direction: column;justify-content: center">
-
-                    </div>
-
                 </div>
             </div>
 
