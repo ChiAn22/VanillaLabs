@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>主页</title>
+    <title>注册</title>
     <link type="text/css" rel="stylesheet" href="./user.css">
     <script type="text/javascript" src="./user.js" defer="defer"></script>
 </head>
@@ -11,7 +11,7 @@
 
 <div id="content">
 
-    <div id="content_leftInner" onmousemove="TouchedCircle()" onmouseleave="TouchedCircleHidden()">
+    <div id="content_leftInner">
         <div class="content_leftInner_listHiddenBackground" style="background: none;height: 100%;width: 100%">
             <div style="height: 100%;width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center">
                 <p id="content_leftInner_text">
@@ -33,14 +33,14 @@
                             </div>
 
                             <div style="height: 8%;width: 100%;display: flex;justify-content:center;margin-bottom: 2%">
-                                <label for="_Address" class="_whiteColorFont" style="display: flex;justify-content: center;align-items: center">地址</label><input type="password" id="_Address" style="width: 60%;height: 100%;margin-left: 6%;border-radius: 6px;border: none">
+                                <label for="_Address" class="_whiteColorFont" style="display: flex;justify-content: center;align-items: center">地址</label><input type="text" id="_Address" style="width: 60%;height: 100%;margin-left: 6%;border-radius: 6px;border: none">
                             </div>
 
                             <div style="height: 8%;width: 100%;display: flex;justify-content:center;margin-bottom: 2%">
                                 <label for="_Password" class="_whiteColorFont" style="display: flex;justify-content: center;align-items: center">密码</label><input type="password" id="_Password" style="width: 60%;height: 100%;margin-left: 6%;border-radius: 6px;border: none">
                             </div>
 
-                            <div style="display: flex;justify-content: center;align-items: center;width: 100%;height: 12%;margin-top: 20px;" class="_touch">
+                            <div style="display: flex;justify-content: center;align-items: center;width: 100%;height: 12%;margin-top: 20px;cursor: pointer" class="_touch" onclick="ClickedForSignUp()">
                                 <div style="display: flex;justify-content: center;align-items: center;width:80%;height: 100%;border-radius: 10px;background: #212121">
                                     <p style="font-weight: bold" class="_whiteColorFont">注册</p>
                                 </div>
