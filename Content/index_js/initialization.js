@@ -14,6 +14,7 @@
         _contentText1=_NameText.substr(0,2);
         _contentText2=_NameText;
         _contentText3=_EmailText;
+        _contentHref='./user/user.html';
     }else {
         _contentText1='登录';
         _contentText2='';
