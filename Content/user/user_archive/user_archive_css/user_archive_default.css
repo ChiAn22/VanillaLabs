@@ -1,0 +1,82 @@
+
+
+#Intro_Content{
+    width: 100%;
+    height: 100%;
+    background: #212121;
+}
+.Intro_Content_Text{
+    font-family:CodeText;
+    font-weight: bold;
+    font-size: 28px;
+    color: #e7e2dc;
+}
+.Intro_Content_Text_Hr{
+    background: #e7e2dc;
+    border: none;
+    height: 0.2em;
+    margin-bottom: 20px;
+}
+
+#Intro_Content_Title{
+    width: 100%;
+    height: 100%;
+}
+#Intro_Content_Issues{
+    padding: 20px;
+    width: 100%;
+    height: 20%;
+}
+
+#Intro_Content_2{
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    background: rgb(44, 103, 35);
+}
+
+#ossm{
+    width: 100%;
+    height: auto;
+}
+#ossm_Content{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.ossm_Content_List{
+    margin-right: 20px;
+    width: 300px;
+    height: 200px;
+    background: #e7e2dc;
+    padding: 10px;
+    border-radius: 10px;
+    transform: scale(1,1);
+    transition: 0.3s;
+}
+.ossm_Content_List:hover{
+    transform: scale(1.02,1.02);
+    transition: 0.3s;
+}
+.ossm_Content_List_TitleImg{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+}
+.ossm_Content_List_TitleImg_Other{
+    height: 100%;
+    width: auto;
+}
+.ossm_Content_List_Title{
+    display: flex;
+    height: 20%;
+}
+.ossm_Content_List_Title_Content{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
