@@ -10,11 +10,12 @@ function ClickedForSignUp(){
     let i=parseInt(window.localStorage.getItem('User_Archive_Na'));
 
     SignUpArchive=
-        document.getElementById('_Email').value+'#,'+
+        document.getElementById('_Email').value.toLowerCase()+'#,'+
         document.getElementById('_UserName').value+'#,'+
         document.getElementById('_Birthday').value+'#,'+
         document.getElementById('_Address').value+'#,'+
-        document.getElementById('_Password').value;
+        document.getElementById('_Password').value+'#,'+
+        document.getElementById('_Email').value;
 
     window.localStorage.setItem('User_Archive'+i,SignUpArchive);
     i++;
@@ -28,21 +29,23 @@ function ClickedForSignUp(){
 }
 
 function ClickedForLogIn(){
-    let Email = document.getElementById('_Email').value;
+    let Email = document.getElementById('_Email').value.toLowerCase();
     let Password = document.getElementById('_Password').value;
     let EmailBool=false;
     let PasswordBool=false;
 
     for(let i=0;i<=parseInt(window.localStorage.getItem('User_Archive_Na'))-1;i++){
         if(Email===window.localStorage.getItem('User_Archive'+i).split('#,')[0]){
-            alert('账号正确');
             EmailBool=true;
             for(let a=0;a<=parseInt(window.localStorage.getItem('User_Archive_Na'))-1;a++){
-                if(Password===window.localStorage.getItem('User_Archive'+a).split('#,')[4]){
-                    alert('密码正确');
+                if(Password===window.localStorage.getItem('User_Archive'+i).split('#,')[4]){
                     PasswordBool=true;
+                    window.localStorage.setItem('User_Statement',i+'#,'+'1');
+                    alert(window.localStorage.getItem('User_Statement'));
+                    return;
                 }
             }
+            return;
         }
     }
     if(PasswordBool===false){

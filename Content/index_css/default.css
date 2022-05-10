@@ -54,7 +54,7 @@ body{
             transition: 0.5s;
         }
         .content_leftInner_listHiddenBackground{
-            height: auto;
+            height: 10%;
             width: 100%;
             margin:6px 0;
         }
