@@ -1,3 +1,11 @@
+window.onscroll=function (){
+    document.getElementById('_BehindBackgroundImg').style.transform ='translateY(-'+window.scrollY*2+'px)';
+    if(window.scrollY>=50){
+        document.getElementById('_BackgroundImg').style.filter='blur(20px)';
+    }else {
+        document.getElementById('_BackgroundImg').style.filter='blur(0)';
+    }
+}
 
 function aa(Object) {
     let goods;
@@ -22,3 +30,4 @@ function aa(Object) {
 for(let v=0;v<=i;v++){
     aa(registList[v]);
 }
+

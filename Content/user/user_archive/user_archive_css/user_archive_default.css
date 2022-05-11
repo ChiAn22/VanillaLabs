@@ -3,7 +3,6 @@
 #Intro_Content{
     width: 100%;
     height: 100%;
-    background: #212121;
 }
 .Intro_Content_Text{
     font-family:CodeText;
@@ -17,10 +16,13 @@
     height: 0.2em;
     margin-bottom: 20px;
 }
-
-#Intro_Content_Title{
+#Intro_Content_Title_Inner{
     width: 100%;
     height: 100%;
+}
+#Intro_Content_Title{
+    width: 100%;
+    height: 80%;
 }
 #Intro_Content_Issues{
     padding: 20px;
