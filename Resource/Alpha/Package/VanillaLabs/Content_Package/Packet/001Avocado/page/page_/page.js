@@ -4,6 +4,7 @@ let TitleImg=H.type[0].imgUrl;
 let a=registList[0].type[0];
 
 window.ondblclick=function (){
+    alert(JSON.stringify(a));
     if(confirm('测试')===true){
         window.localStorage.setItem('cart','');
         alert('clear\n');
@@ -15,55 +16,65 @@ window.ondblclick=function (){
 }
 let OnPickUp=false;
 function Pickup(type){//(〃＾▽＾〃)//
-    if(OnPickUp===false){
-        setTimeout(function (){OnPickUp=false},5100);
-        OnPickUp=true;
-        window.localStorage.setItem('cart',window.localStorage.getItem('cart')+JSON.stringify(type)+'#,');
-        let ub=document.getElementById('_titleImg').style;
-        let lab=document.getElementById('_labsImg').style;
-        ub.transitionDuration='1s';
-        lab.transitionDuration='1s';
-        ub.transitionTimingFunction='ease-in';
-        lab.transitionTimingFunction='ease-in';
-        ub.transform='scale(0.8,0.8)';
-        setTimeout(function (){
-            ub.transitionTimingFunction='ease-out';
-            lab.transitionTimingFunction='ease-out';
-            ub.transform='scale(0.6,0.6) translateY(+10px)';
-            lab.transform='scale(1,1) translateY(-220px) translateX(-6px)'
-        },1000);
-        setTimeout(function (){
-            ub.transitionDuration='2s';
-            lab.transitionDuration='2s';
-            ub.transitionTimingFunction='ease-in';
-            lab.transitionTimingFunction='ease-in';
-            ub.transform='scale(0.6,0.6) translateY(+700px)';
-            lab.transform='scale(1,1) translateY(200px) translateX(-6px)'
-        },2500);
-        setTimeout(function (){
-            ub.transitionDuration='0.1s';
-            lab.transitionDuration='0.1s';
-            ub.setProperty('visibility','hidden');
-            ub.setProperty('opacity','0');
-        },4500);
-        setTimeout(function (){
-            ub.transitionDuration='0s';
-            lab.transitionDuration='0s';
-            ub.transform='scale(0.8,0.8) translateY(0px)';
-            lab.transform='scale(1,1) translateY(200px) translateX(-6px)'
-        },4800);
-        setTimeout(function (){
-            ub.transitionDuration='0.5s';
-            lab.transitionDuration='0.5s';
-            ub.transitionTimingFunction='ease-out';
-            lab.transitionTimingFunction='ease-out';
-            ub.transform='scale(1,1)';
-            ub.setProperty('visibility','visible');
-            ub.setProperty('opacity','1');
-        },5000);
+    if("string" !== typeof window.localStorage.getItem('User_Statement')){
+        window.location.href='/VanillaLabs/Content/user/login.html';
     }else {
-        console.log('正在包装中');
+        if(window.localStorage.getItem('User_Statement').split('#,')[1]==='1'){
+            if(OnPickUp===false){
+                setTimeout(function (){OnPickUp=false},5100);
+                OnPickUp=true;
+                window.localStorage.setItem('cart',window.localStorage.getItem('cart')+JSON.stringify(type)+'#,');
+                let ub=document.getElementById('_titleImg').style;
+                let lab=document.getElementById('_labsImg').style;
+                ub.transitionDuration='1s';
+                lab.transitionDuration='1s';
+                ub.transitionTimingFunction='ease-in';
+                lab.transitionTimingFunction='ease-in';
+                ub.transform='scale(0.8,0.8)';
+                setTimeout(function (){
+                    ub.transitionTimingFunction='ease-out';
+                    lab.transitionTimingFunction='ease-out';
+                    ub.transform='scale(0.6,0.6) translateY(+10px)';
+                    lab.transform='scale(1,1) translateY(-220px) translateX(-6px)'
+                },1000);
+                setTimeout(function (){
+                    ub.transitionDuration='2s';
+                    lab.transitionDuration='2s';
+                    ub.transitionTimingFunction='ease-in';
+                    lab.transitionTimingFunction='ease-in';
+                    ub.transform='scale(0.6,0.6) translateY(+700px)';
+                    lab.transform='scale(1,1) translateY(200px) translateX(-6px)'
+                },2500);
+                setTimeout(function (){
+                    ub.transitionDuration='0.1s';
+                    lab.transitionDuration='0.1s';
+                    ub.setProperty('visibility','hidden');
+                    ub.setProperty('opacity','0');
+                },4500);
+                setTimeout(function (){
+                    ub.transitionDuration='0s';
+                    lab.transitionDuration='0s';
+                    ub.transform='scale(0.8,0.8) translateY(0px)';
+                    lab.transform='scale(1,1) translateY(200px) translateX(-6px)'
+                },4800);
+                setTimeout(function (){
+                    ub.transitionDuration='0.5s';
+                    lab.transitionDuration='0.5s';
+                    ub.transitionTimingFunction='ease-out';
+                    lab.transitionTimingFunction='ease-out';
+                    ub.transform='scale(1,1)';
+                    ub.setProperty('visibility','visible');
+                    ub.setProperty('opacity','1');
+                },5000);
+            }else {
+                console.log('正在包装中');
+            }
+        }else {
+            window.location.href='/VanillaLabs/Content/user/login.html';
+        }
     }
+
+
 
 
 
