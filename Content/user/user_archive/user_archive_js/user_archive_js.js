@@ -34,7 +34,7 @@ function aa(Object) {
     document.getElementById('ossm_Content').appendChild(goods);
 }
 
-for(let v=0;v<=i;v++){
+for(let v=0;v<=window.localStorage.getItem('cart').split('#,').length;v++){
     aa(cart[v].replace('null',''));
 }
 

@@ -73,11 +73,6 @@ function Pickup(type){//(〃＾▽＾〃)//
             window.location.href='/VanillaLabs/Content/user/login.html';
         }
     }
-
-
-
-
-
 }
 
 function typeClicked(type){
