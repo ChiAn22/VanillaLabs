@@ -26,13 +26,14 @@
     padding: 20px;
     width: 100%;
     height: 20%;
+    background: linear-gradient(45deg, #1b5743, #388c73, #62a43b);
 }
 
 #Intro_Content_2{
     padding: 20px;
     width: 100%;
     height: auto;
-    background: rgb(44, 103, 35);
+    background: rgb(43, 43, 43);
 }
 
 #ossm{
