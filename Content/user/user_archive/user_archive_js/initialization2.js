@@ -8,7 +8,7 @@ if("string" !== typeof window.localStorage.getItem('User_Statement')){
     _contentText3='';
     _contentHref='./user/login.html';
 }else if(window.localStorage.getItem('User_Statement').split('#,')[1]==='1'){
-    num=parseInt(window.localStorage.getItem('User_Statement').split('#,')[0]);
+    let num=parseInt(window.localStorage.getItem('User_Statement').split('#,')[0]);
     _EmailText=window.localStorage.getItem('User_Archive'+num).split('#,')[5];
     _NameText=window.localStorage.getItem('User_Archive'+num).split('#,')[1];
     _Birthday=window.localStorage.getItem('User_Archive'+num).split('#,')[2];

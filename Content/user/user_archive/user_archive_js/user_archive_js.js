@@ -7,9 +7,10 @@ window.onscroll=function (){
         document.getElementById('_BackgroundImg').style.filter='blur(0)';
     }
 }
-let cart=[];
-for(let a=1;a<=window.localStorage.getItem('cart').split('#,').length-1;a++){
-    cart[a-1]=window.localStorage.getItem('cart').split('#,')[a-1];
+let _num=parseInt(window.localStorage.getItem('User_Statement').split('#,')[0]);
+let favorite=[];
+for(let a=1;a<=window.localStorage.getItem('favorite'+_num).split('#,').length-1;a++){
+    favorite[a-1]=window.localStorage.getItem('favorite'+_num).split('#,')[a-1];
 }
 
 
@@ -34,7 +35,7 @@ function aa(Object) {
     document.getElementById('ossm_Content').appendChild(goods);
 }
 
-for(let v=0;v<=window.localStorage.getItem('cart').split('#,').length;v++){
-    aa(cart[v].replace('null',''));
+for(let v=0;v<=window.localStorage.getItem('favorite'+_num).split('#,').length;v++){
+    aa(favorite[v].replace('null',''));
 }
 

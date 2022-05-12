@@ -3,18 +3,43 @@ let H=registList[list];
 let TitleImg=H.type[0].imgUrl;
 let a=registList[0].type[0];
 
-window.ondblclick=function (){
-    alert(JSON.stringify(a));
-    if(confirm('测试')===true){
-        window.localStorage.setItem('cart','');
-        alert('clear\n');
-    }else {
-        alert(window.localStorage.getItem('cart'));
-        alert(window.innerHeight+','+window.innerWidth)
-    }
-
-}
+let OnFavorite=false;
 let OnPickUp=false;
+
+let _msg = document.createElement('div');
+_msg.id='_Msg_Inner';
+document.getElementById('_Msg').appendChild(_msg);
+
+function iMsg(Content,time){
+    _msg.innerHTML='<p style="font-weight: bold;font-size: 16px;color: black;display:flex;justify-content: center;align-items: center;margin: 0 16px">'+Content+'</p>';
+    _msg.style.visibility='visible';
+    _msg.style.opacity='1';
+    setTimeout(function (){
+        _msg.style.visibility='hidden';
+        _msg.style.opacity='0';
+    },time||2000);
+}
+
+function Favorite(type){
+    if("string" !== typeof window.localStorage.getItem('User_Statement')){
+        window.location.href='/VanillaLabs/Content/user/login.html';
+    }else {
+        if(window.localStorage.getItem('User_Statement').split('#,')[1]==='1'){
+            if(OnFavorite===false){
+                setTimeout(function (){OnFavorite=false},100);
+                OnFavorite=true;
+                let num=parseInt(window.localStorage.getItem('User_Statement').split('#,')[0]);
+                window.localStorage.setItem('favorite'+num,window.localStorage.getItem('favorite'+num)+JSON.stringify(type)+'#,');
+                iMsg('已收藏',3000);
+            }else {
+                console.log('正在包装中');
+            }
+        }else {
+            window.location.href='/VanillaLabs/Content/user/login.html';
+        }
+    }
+}
+
 function Pickup(type){//(〃＾▽＾〃)//
     if("string" !== typeof window.localStorage.getItem('User_Statement')){
         window.location.href='/VanillaLabs/Content/user/login.html';
@@ -23,9 +48,11 @@ function Pickup(type){//(〃＾▽＾〃)//
             if(OnPickUp===false){
                 setTimeout(function (){OnPickUp=false},5100);
                 OnPickUp=true;
-                window.localStorage.setItem('cart',window.localStorage.getItem('cart')+JSON.stringify(type)+'#,');
+                let num=parseInt(window.localStorage.getItem('User_Statement').split('#,')[0]);
+                window.localStorage.setItem('cart'+num,window.localStorage.getItem('cart'+num)+JSON.stringify(type)+'#,');
                 let ub=document.getElementById('_titleImg').style;
                 let lab=document.getElementById('_labsImg').style;
+                iMsg('开始打包',2000);
                 ub.transitionDuration='1s';
                 lab.transitionDuration='1s';
                 ub.transitionTimingFunction='ease-in';
@@ -44,6 +71,7 @@ function Pickup(type){//(〃＾▽＾〃)//
                     lab.transitionTimingFunction='ease-in';
                     ub.transform='scale(0.6,0.6) translateY(+700px)';
                     lab.transform='scale(1,1) translateY(200px) translateX(-6px)'
+                    iMsg('打包完毕',2000);
                 },2500);
                 setTimeout(function (){
                     ub.transitionDuration='0.1s';
@@ -163,7 +191,7 @@ function PageInitialize(Object){
         '                                               <p id="pick_up_text">分享</p>' +
         '                                           </div>' +
         '</div>'+
-        '                                        <div style="width: 25%;height: 100%;padding:3% 0 3% 3%;cursor: pointer" class="touch">' +
+        '                                        <div style="width: 25%;height: 100%;padding:3% 0 3% 3%;cursor: pointer" class="touch" onclick="Favorite(a)">' +
         '                                           <div style="width: 100%;height: 100%;background: #2b2b2b;border-radius: 8px;display: flex;justify-content: center">' +
         '                                               <p id="pick_up_text">收藏</p>' +
         '                                           </div>' +

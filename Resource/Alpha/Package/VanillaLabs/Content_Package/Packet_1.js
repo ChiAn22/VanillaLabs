@@ -24,28 +24,28 @@ var i=0;
         type:[
             Type1={
                 name:'鳄梨味',
-                backgroundColor:'#800000',
+                backgroundColor:'#2b2b2b',
                 title:'直饮果味维生素C',
                 imgUrl:'/VanillaLabs/Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/TitleImg.png',
                 thisPage:'/VanillaLabs/Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/page/page.html',
             },
             Type2={
                 name:'杏桃味',
-                backgroundColor:'#335c83',
+                backgroundColor:'#2b2b2b',
                 title:'直饮果味维生素C',
                 imgUrl:'/VanillaLabs/Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/TitleImgType2.png',
                 thisPage:'/VanillaLabs/Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/page/page.html',
             },
             Type3={
                 name:'樱花味',
-                backgroundColor:'#2b7b7c',
+                backgroundColor:'#2b2b2b',
                 title:'直饮果味维生素C',
                 imgUrl:'/VanillaLabs/Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/TitleImgType3.png',
                 thisPage:'/VanillaLabs/Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/page/page.html',
             },
             Type4={
                 name:'桑葚味',
-                backgroundColor:'#ffffff',
+                backgroundColor:'#2b2b2b',
                 title:'直饮果味维生素C',
                 imgUrl:'/VanillaLabs/Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/TitleImgType4.png',
                 thisPage:'/VanillaLabs/Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/001Avocado/page/page.html',
