@@ -13,6 +13,23 @@ for(let a=1;a<=window.localStorage.getItem('favorite'+_num).split('#,').length-1
     favorite[a-1]=window.localStorage.getItem('favorite'+_num).split('#,')[a-1];
 }
 
+let _msg = document.createElement('div');
+_msg.id='_Msg_Inner';
+document.getElementById('_Msg').appendChild(_msg);
+
+function iMsg(Content,time){
+    _msg.innerHTML='<p style="font-weight: bold;font-size: 16px;color: black;display:flex;justify-content: center;align-items: center;margin: 0 16px">'+Content+'</p>';
+    _msg.style.visibility='visible';
+    _msg.style.opacity='1';
+    setTimeout(function (){
+        _msg.style.visibility='hidden';
+        _msg.style.opacity='0';
+    },time||2000);
+}
+
+function icart(){
+    iMsg('此功能仍在开发中',2000);
+}
 
 function aa(Object) {
     let Obj = JSON.parse(Object);
