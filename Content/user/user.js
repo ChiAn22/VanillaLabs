@@ -20,6 +20,7 @@ function ClickedForSignUp(){
     window.localStorage.setItem('User_Archive'+i,SignUpArchive);
     i++;
     window.localStorage.setItem('User_Archive_Na',i.toString());
+    window.location.href='/VanillaLabs/Content/user/login.html';
 
     document.getElementById('_Email').value='';
     document.getElementById('_UserName').value='';
@@ -41,7 +42,7 @@ function ClickedForLogIn(){
                 if(Password===window.localStorage.getItem('User_Archive'+i).split('#,')[4]){
                     PasswordBool=true;
                     window.localStorage.setItem('User_Statement',i+'#,'+'1');
-                    alert(window.localStorage.getItem('User_Statement'));
+                    window.location.href='/VanillaLabs/Content/index.html';
                     return;
                 }
             }

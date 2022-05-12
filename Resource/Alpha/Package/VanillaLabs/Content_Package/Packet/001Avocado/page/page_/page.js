@@ -39,6 +39,9 @@ function Favorite(type){
         }
     }
 }
+function Share(){
+    iMsg('口头分享，谢谢',1000);
+}
 
 function Pickup(type){//(〃＾▽＾〃)//
     if("string" !== typeof window.localStorage.getItem('User_Statement')){
@@ -186,7 +189,7 @@ function PageInitialize(Object){
         '                                </div>\n' +
         '                                <div class="content_rightInner_ContentInner_Information_RightContent_Inner3">\n' +
         '                                    <div class="pick_up">\n' +
-        '                                        <div style="width: 25%;height: 100%;padding:3% 0 3% 3%;cursor: pointer" class="touch">' +
+        '                                        <div style="width: 25%;height: 100%;padding:3% 0 3% 3%;cursor: pointer" class="touch" onclick="Share()">' +
         '                                           <div style="width: 100%;height: 100%;background: #2b2b2b;border-radius: 8px;display: flex;justify-content: center">' +
         '                                               <p id="pick_up_text">分享</p>' +
         '                                           </div>' +
