@@ -80,3 +80,30 @@ var i=0;
         introPage_url:'/VanillaLabs/Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/002Icetube/page/page.html',
     }
     registContent(defaultPacket2);
+
+    var defaultPacket3={
+        title:'蜜柑露营煤气罐',
+        titleImg:'/VanillaLabs/Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/003CampingOrange/TitleImg.png',
+        titleIntroduce:'限量',
+        contentImg:'',
+        contentQRCodeUrl:'/VanillaLabs/Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/003CampingOrange/QRcode.png',
+        contentIntroduce:'本商品仅售卖空罐',
+        contentText:['因[首都内]灾防特别法相关条令，此物品不被允许带入[庭馆地区]。','“露营爱好者必备收藏品，因外形形似橘子而被人称为橘子罐。”','质量问题2月内免费退换'],
+        company:'STAR CAMPING(日山)',
+        productionPlaceOfOriginLite:'日山古宁',
+        productionPlaceOfOrigin:'日山市 古宁区迟湾 釉彩工业街25号',
+        backgroundColor:'#1f1f1f',
+        date:'2085年1月',
+        price:'9,500',
+        moreType:false,
+        type:[
+            Type1={
+                name:'默认款',
+                backgroundColor:'#ffffff',
+                title:'蜜柑露营煤气罐',
+                imgUrl:'/VanillaLabs/Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/003CampingOrange/TitleImg.png',
+                thisPage:'/VanillaLabs/Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/003CampingOrange/page/page.html',
+            }],
+        introPage_url:'/VanillaLabs/Resource/Alpha/Package/VanillaLabs/Content_Package/Packet/003CampingOrange/page/page.html',
+    }
+    registContent(defaultPacket3);
